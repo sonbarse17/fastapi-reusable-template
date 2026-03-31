@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FastAPI Starter Template – a production-ready scaffold for rapid Python API development." />
+    <title>FastAPI Starter App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <!-- Ambient background blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <main class="hero">
+        <div class="hero-card glass">
+            <div class="badge">v1.0</div>
+            <h1>{{ message }}</h1>
+            <p class="subtitle">
+                A clean, scalable FastAPI scaffold ready for APIs, templates, services &amp; more.
+            </p>
+
+            <div class="features">
+                <div class="feature-item glass-light">
+                    <span class="feature-icon">⚡</span>
+                    <h3>Fast &amp; Async</h3>
+                    <p>Built on Starlette &amp; Pydantic for blazing-fast async I/O.</p>
+                </div>
+                <div class="feature-item glass-light">
+                    <span class="feature-icon">🧩</span>
+                    <h3>Modular Routes</h3>
+                    <p>Organised route modules with APIRouter for clean separation.</p>
+                </div>
+                <div class="feature-item glass-light">
+                    <span class="feature-icon">🎨</span>
+                    <h3>Jinja2 Templates</h3>
+                    <p>Server-rendered HTML with full templating &amp; layout support.</p>
+                </div>
+                <div class="feature-item glass-light">
+                    <span class="feature-icon">🔧</span>
+                    <h3>Service Layer</h3>
+                    <p>Business logic separated from routes for testability.</p>
+                </div>
+                <div class="feature-item glass-light">
+                    <span class="feature-icon">📦</span>
+                    <h3>Static Assets</h3>
+                    <p>CSS, JS &amp; images served via mounted static directory.</p>
+                </div>
+                <div class="feature-item glass-light">
+                    <span class="feature-icon">⚙️</span>
+                    <h3>Config Ready</h3>
+                    <p>Environment-based settings powered by Pydantic BaseSettings.</p>
+                </div>
+            </div>
+
+            <div class="actions">
+                <a href="/docs" class="btn btn-primary" id="btn-docs">Interactive Docs</a>
+                <a href="/health" class="btn btn-outline" id="btn-health">Health Check</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 FastAPI Starter &middot; Built with ❤️ and Python</p>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
