@@ -8,7 +8,7 @@ sending JSON back to the frontend.
 """
 
 from typing import Optional
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, ConfigDict, EmailStr
 
 # Shared properties
 class UserBase(BaseModel):
@@ -18,8 +18,11 @@ class UserBase(BaseModel):
     full_name: Optional[str] = None
 
 # Properties to receive via API on creation
-class UserCreate(UserBase):
+class UserCreate(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     email: EmailStr
+    full_name: Optional[str] = None
     password: str
 
 # Properties to receive via API on update

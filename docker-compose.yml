@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   # The FastAPI core service
   api:
@@ -12,10 +10,6 @@ services:
     volumes:
       # Mount the current directory into the container for live reload
       - .:/app
-    environment:
-      # Pass through the environment variable loaded from settings configs
-      - ENVIRONMENT=development
-      - DEBUG=True
     env_file:
       - .env
 
